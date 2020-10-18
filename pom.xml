@@ -5,7 +5,7 @@
 
   <groupId>com.wbs</groupId>
   <artifactId>sql</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
   <name>sql</name>
 
   <distributionManagement>
@@ -17,6 +17,19 @@
   </distributionManagement>
 
   <dependencies>
+    <!-- THIS IS NEEDED FOR ReferenceTypeDeserializer -.- -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.9.9</version>
+      <scope>compile</scope>
+    </dependency>
+    <!-- Javax xml was removed jdk 9+ so we need to import it -->
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+      <version>2.3.1</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-bom -->
     <dependency>
       <groupId>org.jdbi</groupId>
