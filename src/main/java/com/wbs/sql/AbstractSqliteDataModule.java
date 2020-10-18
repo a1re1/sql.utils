@@ -8,7 +8,7 @@ import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
 import ru.vyarus.guicey.jdbi3.JdbiBundle;
 
-public abstract class AbstractDataModule<DAO> extends AbstractModule {
+public abstract class AbstractSqliteDataModule<DAO> extends AbstractModule {
     protected abstract String getNamespace();
     protected abstract Class<DAO> getClazz();
 
